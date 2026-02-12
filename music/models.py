@@ -49,12 +49,12 @@ class Songs(models.Model):
 
     def get_image_url(self):
         if self.image:
-            return 'http://127.0.0.1:8000/' + self.image.url
+            return 'https://spotify-django-1.onrender.com/' + self.image.url
         return ''
 
     def get_track_url(self):
         if self.track:
-            return 'http://127.0.0.1:8000/' + self.track.url
+            return 'https://spotify-django-1.onrender.com/' + self.track.url
         return ''
 
     def get_absolute_url(self):

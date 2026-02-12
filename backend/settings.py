@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure--g%6&019!m_tpn!4#+u81lvz0k-uzm_5g&$wut6t-h31_g+_3v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*','https://spotify-next-ww.vercel.app/','http://localhost:3000/',".onrender.com"]
 
 
 # Application definition
@@ -183,6 +183,7 @@ AUTH_COOKIE = 'access'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # یا هر پورت فرانت‌اندت
     "http://127.0.0.1:3000",
+    'https://spotify-next-ww.vercel.app/',
 ]
 
 
@@ -222,6 +223,7 @@ USE_TZ = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",   
     "http://127.0.0.1:3000",
+    'https://spotify-next-ww.vercel.app/'
 ]
 
 CORS_ALLOW_HEADERS = [
