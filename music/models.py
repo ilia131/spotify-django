@@ -5,14 +5,12 @@ from django.utils.text import slugify
 from django.utils import timezone
 
 class Songs(models.Model):
-    # صاحب اصلی آهنگ
     artist = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
         related_name="songs"
     )
 
-    # آرتیست‌های همکاری کرده (optional)
     collaborators = models.ManyToManyField(
         settings.AUTH_USER_MODEL,
         blank=True,
@@ -49,12 +47,12 @@ class Songs(models.Model):
 
     def get_image_url(self):
         if self.image:
-            return 'https://spotify-django-1.onrender.com/' + self.image.url
+            return 'http://127.0.0.1:8000/' + self.image.url
         return ''
 
     def get_track_url(self):
         if self.track:
-            return 'https://spotify-django-1.onrender.com/' + self.track.url
+            return 'http://127.0.0.1:8000/' + self.track.url
         return ''
 
     def get_absolute_url(self):

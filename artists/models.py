@@ -28,12 +28,12 @@ class Artist(AbstractBaseUser , PermissionsMixin):
     
     def get_image(self):
         if self.profile_pic:
-            return 'https://spotify-django-1.onrender.com/' + self.profile_pic.url
+            return 'http://127.0.0.1:8000/' + self.profile_pic.url
         return ''
     
     def get_background(self):
          if self.background:
-            return 'https://spotify-django-1.onrender.com/' + self.background.url
+            return 'http://127.0.0.1:8000/' + self.background.url
          return ''
     
    
